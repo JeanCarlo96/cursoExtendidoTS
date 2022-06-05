@@ -42,3 +42,4 @@
     })(enumeracion || (enumeracion = {}));
     console.log(`Enumeración d: ${enumeracion.d}`);
 })();
+//# sourceMappingURL=app.js.map

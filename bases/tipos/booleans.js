@@ -14,3 +14,4 @@
     //isSuperman = (isBatman) ? 'ABC' : 'XYZ';
     //isSuperman = (isBatman) ? true : 'XYZ';
 })();
+//# sourceMappingURL=booleans.js.map
