@@ -1,11 +1,15 @@
-import { getPokemon, consultarPokemon } from './generics/get-pokemon';
+// Importando clase Pokemon
+import { Pokemon } from "./decorators/pokemon-class";
 
-// Llamando una función que tenemos en otro archivo
-getPokemon(4)
-.then(pokemon => console.log(pokemon.sprites.front_default))
-.catch(error => console.error(error))
-.finally(() => console.log('Fin de getPokemon'));
+const charmander = new Pokemon('Charmander');
 
-consultarPokemon(1)
-    .then(pokemon => console.log(`El pokemon encontrado es: ${pokemon.name}`))
-    .catch(err => console.error(err));
+console.log(charmander);
+
+// Intentemos expandir
+// Nos da error debido al uso del decorador
+//(Pokemon.prototype as any).customName = 'Pikachu';
+
+charmander.savePokemonToDB(1);
+
+charmander.publicApi = 'Jean Carlo Marchesini';
+console.log(charmander);
