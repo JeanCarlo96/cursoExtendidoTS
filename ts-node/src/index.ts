@@ -1,28 +1,11 @@
-//import { Hero as SuperHero} from './classes/Hero';
-import * as HeroClasses from './classes/Hero';
-//import { powers } from './data/powers';
-// Importación por defecto
-import powersName, { Power } from './data/powers';
+import { getPokemon, consultarPokemon } from './generics/get-pokemon';
 
-// Intancia de un objeto cuya clase está en otro archivo
-const ironman = new HeroClasses.Hero('Ironman', 1, 55);
+// Llamando una función que tenemos en otro archivo
+getPokemon(4)
+.then(pokemon => console.log(pokemon.sprites.front_default))
+.catch(error => console.error(error))
+.finally(() => console.log('Fin de getPokemon'));
 
-console.log(ironman);
-
-// Imprimiendo la constante de la clase Hero
-console.log(HeroClasses.PI);
-
-console.log(HeroClasses.myName);
-
-// Imprimiendo un arreglo de la clase Powers
-//powers.forEach((valor) => {
-powersName.forEach((valor) => {
-    console.log(valor);
-});
-
-
-console.log(ironman.power);
-
-
-
-
+consultarPokemon(1)
+    .then(pokemon => console.log(`El pokemon encontrado es: ${pokemon.name}`))
+    .catch(err => console.error(err));
