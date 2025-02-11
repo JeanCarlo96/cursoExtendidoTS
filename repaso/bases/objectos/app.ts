@@ -44,6 +44,8 @@
         edad: undefined,
         mutante: true
     }];
+    
+    console.log(villanos);
 
     type heroe = {
         poder: string,
@@ -64,6 +66,8 @@
         lider: true,
         miembros: ['Magneto', 'Tormenta', "Psylocke", 'Angel']
     };
+
+    console.log(apocalipsis);
 
     let mystic: (heroe | villano);
 
